@@ -1,14 +1,14 @@
 //your JS code here. If required.
-const createPromise(){
+function createPromise(){
 	return new Promise((resolve)=>{
 		let time = Math.random()*2000 + 1000
 		setTimeout(resolve(time),time)
 	})
 }
 
-const promise1 = createPromise();
-const promise2 = createPromise();
-const promise3 = createPromise();
+let promise1 = createPromise();
+let promise2 = createPromise();
+let promise3 = createPromise();
 
 let tableBody = document.getElementById('output')
 
