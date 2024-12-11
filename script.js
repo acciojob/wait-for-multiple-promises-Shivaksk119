@@ -33,5 +33,5 @@ Promise.all([promise1,promise2,promise3]).then((times)=>{
 	let cell1 = lastrow.insertCell(0);
 	let cell2 = lastrow.insertCell(1);
 	cell1.innerHTML = `Total`
-	cell2.innerHTML = ((times[0]+times[1]+times+[2])).toFixed(3)
+	cell2.innerHTML = ((times[0]+times[1]+times[2])).toFixed(3)
 })
