@@ -12,10 +12,6 @@ let promise3 = createPromise();
 
 let tableBody = document.getElementById('output')
 
-let row1 = tableBody.insertRow()
-let cell = row1.insertCell()
-cell.colSpan = 2
-cell.innerHTML = 'Loading...'
 
 Promise.all([promise1,promise2,promise3]).then((times)=>{
 	tableBody.deleteRow(0)
