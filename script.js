@@ -16,7 +16,6 @@ Promise.all([promise1,promise2,promise3]).then((times)=>{
 
 	for(let i=0;i<3;i++){
 		let row = tableBody.insertRow(i);
-
 		let cell1 = row.insertCell(0);
 		let cell2 = row.insertCell(1);
 
@@ -26,8 +25,8 @@ Promise.all([promise1,promise2,promise3]).then((times)=>{
 
 	//fourth row
 	let lastrow = tableBody.insertRow(3)
-	let cell1 = row.insertCell(0);
-	let cell2 = row.insertCell(1);
+	let cell1 = lastrow.insertCell(0);
+	let cell2 = lastrow.insertCell(1);
 	cell1.innerHTML = `Total`
 	cell2.innerHTML = ((times[0]+times[1]+times+[2])/1000).toFixed(3)
 })
