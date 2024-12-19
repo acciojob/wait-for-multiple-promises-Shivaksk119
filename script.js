@@ -14,14 +14,15 @@ let tableBody = document.getElementById('output')
 
 
 Promise.all([promise1,promise2,promise3]).then((times)=>{
-	tableBody.deleteRow(0)
+	let thElem = document.querySelector("#loading th").remove();
+	//tableBody.deleteRow(0)
 	for(let i=0;i<3;i++){
 		let row = tableBody.insertRow(i);
 		let cell1 = row.insertCell(0);
 		let cell2 = row.insertCell(1);
 
 		cell1.innerHTML = `Promise ${i+1}`
-		cell2.innerHTML = Math.ceil(times[i])
+		cell2.innerHTML = Math.floor(times[i])
 	}
 
 	//fourth row
