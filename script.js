@@ -24,13 +24,18 @@ Promise.all([promise1,promise2,promise3]).then((times)=>{
 	}
 
 	//fourth row
-	let lastrow = tableBody.insertRow(3)
-	let cell1 = lastrow.insertCell(0);
-	let cell2 = lastrow.insertCell(1);
+	let loadingRow = document.getElementById("loading");
+	document.querySelector("#loading td").remove()
+	//let lastrow = tableBody.insertRow(3)
+	let cell1 = loadingRow.insertCell(0);
+	let cell2 = loadingRow.insertCell(1);
 	cell1.innerHTML = `Total`
 	cell2.innerHTML = ((times[0]+times[1]+times[2])).toFixed(2)
 
 	//remove loading 
-	let loadingRow = document.getElementById("loading");
-	tableBody.removeChild(loadingRow);
+	// let loadingRow = document.getElementById("loading");
+	// tableBody.removeChild(loadingRow);
+	//tableBody.deleteRow(4);
 })
+
+//
