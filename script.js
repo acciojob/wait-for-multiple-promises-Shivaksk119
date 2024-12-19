@@ -14,15 +14,22 @@ let tableBody = document.getElementById('output')
 
 
 Promise.all([promise1,promise2,promise3]).then((times)=>{
-	let thElem = document.querySelector("#loading th").remove();
+	let thElem = document.querySelector("#loading td").innerHTML="";
+	let trElem = document.getElementById("loading")
 	//tableBody.deleteRow(0)
 	for(let i=0;i<3;i++){
+		// let tdElem1 = document.createElement("td");
+		// let tdElem2 = document.createElement("td");
+		// tdElem1.innerHTML = `Promise ${i+1}`;
+		// tdElem2.innerHTML = Math.floor(times[i])
+		// trElem.appendChild(tdElem1);
+		// trElem.appendChild(tdElem2);
 		let row = tableBody.insertRow(i);
 		let cell1 = row.insertCell(0);
 		let cell2 = row.insertCell(1);
 
-		cell1.innerHTML = `Promise ${i+1}`
-		cell2.innerHTML = Math.floor(times[i])
+		cell1.innerHTML = `Promise ${i+1}`;
+		cell2.innerHTML = Math.floor(times[i]);
 	}
 
 	//fourth row
