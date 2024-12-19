@@ -14,8 +14,7 @@ let tableBody = document.getElementById('output')
 
 
 Promise.all([promise1,promise2,promise3]).then((times)=>{
-	let thElem = document.querySelector("#loading td");
-	let trElem = document.getElementById("loading")
+	//let trElem = document.getElementById("loading")
 	//tableBody.deleteRow(0)
 	for(let i=0;i<3;i++){
 		// let tdElem1 = document.createElement("td");
@@ -38,4 +37,7 @@ Promise.all([promise1,promise2,promise3]).then((times)=>{
 	let cell2 = lastrow.insertCell(1);
 	cell1.innerHTML = `Total`
 	cell2.innerHTML = ((times[0]+times[1]+times[2])).toFixed(3)
+	
 })
+
+document.querySelector("#loading").remove();
